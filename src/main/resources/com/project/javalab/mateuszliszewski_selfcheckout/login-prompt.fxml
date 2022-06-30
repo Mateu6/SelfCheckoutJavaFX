@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="159.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.javalab.mateuszliszewski_selfcheckout.SelfCheckoutController">
+   <children>
+      <TextField fx:id="passwdText" layoutX="55.0" layoutY="56.0" onAction="#onLoginButtonClick" promptText="Hasło" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" />
+      <Button fx:id="loginButton" layoutX="136.0" layoutY="107.0" mnemonicParsing="false" onAction="#onLoginButtonClick" text="Zaloguj" />
+      <Label fx:id="loginLabel" alignment="CENTER" layoutX="55.0" layoutY="82.0" prefHeight="17.0" prefWidth="220.0" />
+   </children>
+</AnchorPane>

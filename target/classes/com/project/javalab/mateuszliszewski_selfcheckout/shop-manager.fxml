@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="485.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.javalab.mateuszliszewski_selfcheckout.ShopManagerController">
+   <children>
+      <TableView fx:id="productsTable" editable="true" layoutX="24.0" layoutY="202.0" prefHeight="269.0" prefWidth="555.0">
+        <columns>
+          <TableColumn fx:id="idCol" editable="false" prefWidth="41.0" text="Id" />
+          <TableColumn fx:id="prodName" prefWidth="176.0" text="Nazwa produktu" />
+            <TableColumn fx:id="manufacturer" prefWidth="131.0" text="Producent" />
+            <TableColumn fx:id="category" prefWidth="108.0" text="Kategoria" />
+            <TableColumn fx:id="amount" prefWidth="49.0" text="Ilość" />
+            <TableColumn fx:id="pricePerItem" prefWidth="49.0" text="Cena" />
+        </columns>
+      </TableView>
+      <TextField fx:id="prodNameInput" layoutX="24.0" layoutY="58.0" prefHeight="25.0" prefWidth="320.0" promptText="Wpisz nazwę produktu" />
+      <TextField fx:id="manufacturerInput" layoutX="24.0" layoutY="108.0" prefHeight="25.0" prefWidth="320.0" promptText="Podaj producenta" />
+      <Button fx:id="addToBase" layoutX="416.0" layoutY="65.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="86.0" prefWidth="126.0" text="Dodaj do bazy">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <TextField fx:id="amountInput" alignment="CENTER" layoutX="186.0" layoutY="155.0" prefHeight="26.0" prefWidth="77.0" promptText="Ilość" />
+       
+      <Label layoutX="24.0" layoutY="138.0" prefHeight="17.0" prefWidth="77.0" text="Kategoria" />
+      <Label layoutX="24.0" layoutY="35.0" text="Nazwa produktu" />
+      <Label layoutX="24.0" layoutY="91.0" text="Producent" />
+      <Label layoutX="186.0" layoutY="138.0" text="Ilość" />
+      <Button fx:id="refreshTable" layoutX="416.0" layoutY="156.0" mnemonicParsing="false" onMouseClicked="#populateProductsTable" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: lightblue; -fx-border-color: teal;" text="Odśwież">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteFromBase" layoutX="496.0" layoutY="156.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: pink; -fx-border-color: red;" text="Usuń">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="categoriesCB" editable="true" layoutX="26.0" layoutY="155.0" onShowing="#populateCategoriesComboBox" prefHeight="26.0" prefWidth="90.0" />
+      <TextField fx:id="pricePerItemInput" alignment="CENTER" layoutX="269.0" layoutY="155.0" prefHeight="26.0" prefWidth="77.0" promptText="Cena" />
+      <Label layoutX="269.0" layoutY="138.0" text="Cena za szt." />
+      <Label layoutX="123.0" layoutY="138.0" text="ID" />
+      <TextField fx:id="idInput" layoutX="123.0" layoutY="155.0" prefHeight="26.0" prefWidth="57.0" promptText="Id" />
+   </children>
+</AnchorPane>
