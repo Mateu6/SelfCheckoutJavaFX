@@ -14,7 +14,10 @@ public class MainScannerController {
     @FXML
     private Button adminMainButton;
     @FXML
-    private Button editCartButton;
+    private Button editListButton;
+    @FXML
+    private Button showCartButton;
+
 
 
     @FXML

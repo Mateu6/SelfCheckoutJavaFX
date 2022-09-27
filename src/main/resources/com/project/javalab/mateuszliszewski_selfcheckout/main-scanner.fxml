@@ -4,10 +4,11 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.javalab.mateuszliszewski_selfcheckout.MainScannerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.javalab.mateuszliszewski_selfcheckout.MainScannerController">
    <children>
       <ListView layoutX="36.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="258.0" style="-fx-border-color: black;" />
       <Button fx:id="adminMainButton" layoutX="36.0" layoutY="535.0" mnemonicParsing="false" onAction="#onAdminMainButtonClick" prefHeight="38.0" prefWidth="93.0" text="Obsługa bazy" />
-      <Button fx:id="editCartButton" layoutX="137.0" layoutY="535.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="156.0" text="Edycja listy" />
+      <Button fx:id="editListButton" layoutX="137.0" layoutY="535.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="156.0" text="Edycja listy" />
+      <Button fx:id="showCartButton" layoutX="585.0" layoutY="537.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="81.0" text="Koszyk" />
    </children>
 </AnchorPane>

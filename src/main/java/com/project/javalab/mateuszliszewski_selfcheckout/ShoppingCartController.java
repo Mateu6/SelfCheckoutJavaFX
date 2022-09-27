@@ -9,6 +9,7 @@ import com.project.javalab.mateuszliszewski_selfcheckout.connection.ConnectionCl
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Optional;
 
 public class ShoppingCartController {
@@ -42,8 +43,10 @@ public class ShoppingCartController {
 
             preparedStatement.close();
             resultSet.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (SQLException e) {
+            System.Logger logger = System.getLogger(getClass().getName());
+            logger.log(System.Logger.Level.WARNING, "Brak połączenia. | " + e);
+
         }
     }
 
@@ -94,9 +97,6 @@ public class ShoppingCartController {
                 } catch (Exception e){
                     e.printStackTrace();
                 }
-
-            } else {
-
             }
         }
     }
